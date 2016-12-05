@@ -95,3 +95,50 @@
 .form-submit:active {
 	border: 1px solid #5c6bc0;
 }
+
+@media (max-width: 480px) {
+
+    .form__input_name {
+        width:350px;
+        margin: 26px 0;
+
+    }
+
+    .form__input_email {
+        width:350px;
+        float: none;
+    }
+
+    .form__input_subject {
+        width:350px;
+    }
+
+    .form__input_message {
+
+        height: 250px;
+        width:350px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .form__input_name {
+        width:231px;
+        margin: 26px 0;
+
+    }
+
+    .form__input_email {
+        width:231px;
+        float: none;
+    }
+
+    .form__input_subject {
+        width:231px;
+    }
+
+    .form__input_message {
+        height: 231px;
+        width:231px;
+    }
+}

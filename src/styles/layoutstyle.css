@@ -4,8 +4,6 @@
 	font: 700 16px / 25px Lato, serif;
 	padding: 0;
 	margin: 0;
-	
-	
 }
 
 .page {
@@ -83,84 +81,6 @@
 	display: inline-block;
 }
 
-.article {
-	display: inline-block;
-	background-color: #ffffff;
-	margin: 0 20px 40px;
-	padding: 58px 98px;
-	box-sizing: border-box;
-	box-shadow: 0 0 20px #cccccc;
-	width: 952px;
-	position: relative;
-}
-
-.article__date {
-	color: #bdbdbd;
-	font-size: 14px;
-}
-
-.article__heading {
-	font-size: 40px;
-	line-height: 50px;
-}
-
-.article__tag {
-  text-transform: capitalize;
-  font: 18px sans-serif;
-  padding: 10px 20px;
-  border: none; 
-  outline: none;
-  color: #FFF;
-  cursor: pointer;
-  transition: padding 150ms linear;
-  background-color: #5c6bc0;
-  position: absolute;
-  right: -16px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.article__tag:hover {
-  background: #6B78C5;
-  padding: 12px 22px;
-}
-
-.article__tag:active {
-	background: #525FAB;
-}
-
-.article__bar {
-	background-color: #e6e6e6;
-	margin: 42px auto;
-	height: 2px;
-	width: 742px;
-}
-
-.article__footer {
-	margin-top: 35px;
-}
-.article__footer-readmore {
-	text-transform: uppercase;
-	box-sizing: border-box;
-	font-size: 21px;
-	text-decoration: none;
-	color: #5c6bc0;
-	display: inline-block;
-	text-align: center;
-	padding: 10px;
-	float: left;
-}
-
-.article__footer-readmore:hover {
-	padding: 9px;
-	border: 1px solid #e6e6e6;
-}
-
-.article__footer-readmore:active {
-	border: 1px solid #5c6bc0;
-}
-
-
 .footer {
 	background-color: #5c6bc0;
 	padding: 67px 322px;
@@ -170,10 +90,8 @@
 .footer__logo {
 	height: 28px;
 	width: 135px;
-	margin: 0 auto 64px;
+	margin: 0 auto 30px;
 }
-
-
 
 .footer__nav {
 	text-transform: uppercase;
@@ -237,9 +155,9 @@
 }
 
 .footer__share {
-	text-align: center;
+	margin: auto;
 	padding: 27px 0 0;
-    background: url(images/social.png);
+    background: url(../images/social.png) no-repeat;
 }
 
 .footer__share__item {
@@ -278,4 +196,50 @@
 	width: 22px;
     left: 139px;
     
+}
+
+
+@media (max-width: 480px) {
+    .page {
+        padding: 63px 15px 0;
+    }
+
+    .header {
+        width: 450px;
+    }
+
+    .main {
+        width: 450px;
+        padding: 40px 0px;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+    
+    
+    .footer {
+        padding: 64px 65px;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .page {
+        padding: 63px 20px 0;
+    }
+
+    .header {
+        width: 300px;
+    }
+
+    .main {
+        width: 300px;
+        padding: 25px 0px;
+    }
+    
+    .footer {
+        padding: 71px 40px;
+    }
+
 }

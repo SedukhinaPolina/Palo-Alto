@@ -10,7 +10,7 @@ var cssmin = require('gulp-cssmin');
 var autoprefixer = require('gulp-autoprefixer');
 var server = lr();
 var path = {
-    css:  'src/style/*.css',
+    css:  'src/styles/*.css',
     html: 'src/templates/*.html',
     images: 'src/images/*.*',
     vendor: {
