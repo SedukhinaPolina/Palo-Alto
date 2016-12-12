@@ -16,18 +16,24 @@ var path = {
     vendor: {
 	css: 'src/vendor/*.css'
     },
+    mock: 'src/mockapi/*.json',
     dist: {
       css:  'dist/styles/',
       html: 'dist/',
       images: 'dist/images/',
-      vendor: 'dist/vendor/'
+      vendor: 'dist/vendor/',
+      mock: 'dist/mockapi/'
     }
 };
 
 
 gulp.task('default', ['build', 'serve', 'watch']);
 
-
+gulp.task('js', function () {
+  return gulp.src(path.js)
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest(path.dist.js));
+});
 
 gulp.task('css', function () {
   return gulp.src(path.css)

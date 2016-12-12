@@ -123,22 +123,22 @@
 @media (max-width: 320px) {
 
     .form__input_name {
-        width:231px;
+        width:185px;
         margin: 26px 0;
 
     }
 
     .form__input_email {
-        width:231px;
+        width:185px;
         float: none;
     }
 
     .form__input_subject {
-        width:231px;
+        width:185px;
     }
 
     .form__input_message {
-        height: 231px;
-        width:231px;
+        height: 185px;
+        width:185px;
     }
 }

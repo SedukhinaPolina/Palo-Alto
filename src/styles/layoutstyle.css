@@ -199,17 +199,18 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .page {
-        padding: 63px 15px 0;
+        padding: 63px 34px 0;
     }
 
     .header {
-        width: 450px;
+        width: 700px;
+        margin: auto;
     }
 
     .main {
-        width: 450px;
+        width: 700px;
         padding: 40px 0px;
     }
     
@@ -219,6 +220,7 @@
     
     
     .footer {
+        width: 768px;
         padding: 64px 65px;
     }
 
