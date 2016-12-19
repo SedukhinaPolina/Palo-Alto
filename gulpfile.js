@@ -16,18 +16,34 @@ var path = {
     vendor: {
 	css: 'src/vendor/*.css'
     },
+    partials: 'src/templates/partials/*.html',
     mock: 'src/mockapi/*.json',
+    js: 'src/scripts/*.js',
     dist: {
       css:  'dist/styles/',
       html: 'dist/',
       images: 'dist/images/',
       vendor: 'dist/vendor/',
-      mock: 'dist/mockapi/'
+      mock: 'dist/mockapi/',
+      js: 'dist/scripts/',
+    partials: 'dist/partials/'
     }
 };
 
 
 gulp.task('default', ['build', 'serve', 'watch']);
+
+gulp.task('mock', function () {
+  return gulp.src(path.mock)
+    .pipe(concat('content.json'))
+    .pipe(gulp.dest(path.dist.mock));
+});
+
+gulp.task('partials', function () {
+  return gulp.src(path.partials)
+    .pipe(concat('article.html'))
+    .pipe(gulp.dest(path.dist.partials));
+});
 
 gulp.task('js', function () {
   return gulp.src(path.js)
@@ -65,12 +81,16 @@ gulp.task('images', function() {
 });
 
 
-gulp.task('build', ['html', 'css', 'images','vendor']);
+gulp.task('build', ['html', 'css', 'images','vendor', 'js','mock', 'partials']);
 
 gulp.task('watch', function () {
   gulp.watch(path.css, ['css']);
+  gulp.watch(path.js, ['js']);
   gulp.watch(path.html, ['html']);
-  gulp.watch(path.images, ['images']);
+  gulp.watch(path.partials, ['partials']);
+  gulp.watch(path.vendor.css, ['vendor-css']);
+  gulp.watch(path.images, ['img']);
+  gulp.watch(path.mock, ['mock']);
 });
 
 gulp.task('serve', ['watch'], function() {
@@ -79,5 +99,5 @@ gulp.task('serve', ['watch'], function() {
       baseDir: path.dist.html
     }
   });
-  gulp.watch('dist/*').on('change', browserSync.reload);
+  gulp.watch('dist/**').on('change', browserSync.reload);
 });

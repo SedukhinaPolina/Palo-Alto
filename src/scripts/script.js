@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+$( document ).ready(function () {
 
   nunjucks.configure({
     autoescape: true,
@@ -11,11 +11,14 @@ $(document).ready(function () {
   $.ajax({
     url: "./mockapi/content.json",
     success: function(data, status) {
-      for (item in articles) {
-        nunjucks.render('./article.html', articles[item], function (err, res) {
+      for (item in data.articles) {
+        nunjucks.render('./partials/article.html', data.articles[item], function (err, res) {
           $('.js-articles').append(res);
         });
       }
-    }
+    },
+      error: function(data, status) {
+          debugger
+      }
   });
 });

@@ -83,6 +83,8 @@
 }
 
 .article__picture-woman{
+    width: 186px;
+    height: 350px;
 	float:left;
 	margin: 0 23px 19px 0;
 }
@@ -119,6 +121,7 @@
 }
 
 .article__footer {
+    float: none;
 	margin-top: 35px;
 }
 .article__footer-readmore {
