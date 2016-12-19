@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<main class="main">
+				<section class="section">
+					<article class="article">
+						<header>
+							<h2 class="article__heading">About</h2>
+						</header>
+						<div class="article__bar"></div>
+						<form class="about-form">
+                            <div class="input__form">
+                            <label class="about-form__label" for="first-name" >First Name</label>
+                            
+                            <input type="text" name="first-name" id="firstname" class="about-form__input" required placeholder="First Name">
+                            
+                            <label class="about-form__error" for="first-name" id="errorlabel">ololo</label>
+                            </div>
+                            
+                            <div class="input__form">
+                            <label class="about-form__label" for="last-name" >Last Name</label>
+                            
+                            <input type="text" name="last-name" id="lastname" class="about-form__input" required placeholder="Last Name">
+                            
+                            <label class="about-form__error" for="last-name"></label>
+                            </div>
+                            
+                            <div class="input__form">
+                            <label class="about-form__label" for="e-mail" >E-mail</label>
+                            
+                            <input type="email" name="e-mail" name="e-mail" class="about-form__input" placeholder="E-mail" required>
+                            
+                            <label class="about-form__error" for="e-mail"></label>
+                            </div>
+                            
+                            
+                            <label class="about-form__label" for="phone" >Phone</label>
+                            <footer class="article__footer">
+							<button type="submit" id="submit" class="about-form__button">submit</button>
+						    </footer>
+						</form>
+						
+		</article>
+	</section>
+</main>
+{% endblock %}
