@@ -12,29 +12,40 @@
                             <div class="input__form">
                             <label class="about-form__label" for="first-name" >First Name</label>
                             
-                            <input type="text" name="first-name" id="firstname" class="about-form__input" required placeholder="First Name">
-                            
-                            <label class="about-form__error" for="first-name" id="errorlabel">ololo</label>
+                            <input type="text" name="first-name" id="firstname" class="about-form__input" placeholder="First Name">
                             </div>
                             
                             <div class="input__form">
                             <label class="about-form__label" for="last-name" >Last Name</label>
                             
-                            <input type="text" name="last-name" id="lastname" class="about-form__input" required placeholder="Last Name">
-                            
-                            <label class="about-form__error" for="last-name"></label>
+                            <input type="text" name="last-name" id="lastname" class="about-form__input" placeholder="Last Name">
                             </div>
                             
                             <div class="input__form">
                             <label class="about-form__label" for="e-mail" >E-mail</label>
                             
-                            <input type="email" name="e-mail" name="e-mail" class="about-form__input" placeholder="E-mail" required>
-                            
-                            <label class="about-form__error" for="e-mail"></label>
+                            <input type="email" name="e-mail" id="e-mail" class="about-form__input" placeholder="E-mail">
                             </div>
                             
-                            
+                            <div class="input__form">
                             <label class="about-form__label" for="phone" >Phone</label>
+                                
+                            <input type="text" name="phone" id="phone" class="about-form__input" placeholder="+7(___)___-__-__">
+                            </div>
+                    
+                            <div class="input__form">
+                            <label class="about-form__label" for="date" >Date of Birth</label>
+                                
+                            <input type="text" name="datepicker" id="datepicker" class="about-form__input" placeholder="DD/MM/YYYY">
+                            </div>
+                            
+                            <div class="input__form">
+                            <label class="about-form__label" for="sex" >Sex</label>
+                                
+                                <p class="about-form__radio-text"><input class="about-form__radio" type="radio" name="sex" value="male"  checked>  Male</p>
+                                <p class="about-form__radio-text"><input class="about-form__radio" type="radio" name="sex" value="female">  Female</p>
+                            </div>
+                            
                             <footer class="article__footer">
 							<button type="submit" id="submit" class="about-form__button">submit</button>
 						    </footer>
