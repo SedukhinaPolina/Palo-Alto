@@ -17,6 +17,10 @@
     display: inline-block;
 }
 
+.about-form__button:disabled {
+    opacity: 0.5;
+}
+
 .about-form__input {
     background-color:#f7f9fc;
     width: 100%;
@@ -77,3 +81,15 @@
     height: 15px;
     color: #5c6bc0;
 }
+
+.ui-datepicker {
+  background-color:#5c6bc0;
+    
+  
+}
+
+.ui-datepicker a {
+  text-decoration: none;
+    color: #ffffff;
+}
+
